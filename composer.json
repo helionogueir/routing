@@ -1,0 +1,19 @@
+{
+    "name": "helionogueir/routing",
+    "description": "Routing - The Routing HTTP action request and set of configuration variables",
+    "homepage": "https://github.com/helionogueir",
+    "license": "MIT",
+    "keywords": ["library", "tool", "php", "routing", "http", "action", "request"],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "files": ["core/autoload/register.inc"]
+    },
+    "authors": [
+        {
+            "name": "Helio Nogueira",
+            "email": "helio.nogueir@gmail.com"
+        }
+    ]
+}
