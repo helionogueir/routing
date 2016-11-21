@@ -1,6 +1,6 @@
 <?php
 
-namespace helionogueir\rounting\request;
+namespace helionogueir\rounting\server;
 
 use Exception;
 
