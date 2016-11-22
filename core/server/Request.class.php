@@ -1,8 +1,9 @@
 <?php
 
-namespace helionogueir\rounting\server;
+namespace helionogueir\routing\server;
 
 use Exception;
+use helionogueir\typeBoxing\type\Str;
 
 /**
  * Request:
@@ -13,16 +14,19 @@ use Exception;
  */
 class Request {
 
-    /**
-     * Contruct basic parameters:
-     * - Get basic paramiters of match
-     * 
-     * @param helionogueir\typeBoxing\type\String $action Action of server request
-     * @param helionogueir\typeBoxing\type\String $pathRoot Path root of application
-     * @return null
-     */
-    public function __construct(String $action, String $pathRoot) {
-        return null;
-    }
+  /**
+   * Contruct basic parameters:
+   * - Get basic paramiters of match
+   *
+   * @param helionogueir\typeBoxing\type\String $action Action of server request
+   * @param helionogueir\typeBoxing\type\String $pathRoot Path root of application
+   * @return null
+   */
+  public function __construct(Str $action, Str $pathRoot) {
+    var_dump($action);
+    var_dump($pathRoot);
+    die;
+    return null;
+  }
 
 }
