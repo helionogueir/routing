@@ -31,8 +31,6 @@ class Autoload {
         $filename = \helionogueir\foldercreator\tool\Path::replaceOSSeparator("{$pathRoot}/{$classname}.class.php");
         if (file_exists($filename)) {
           require_once($filename);
-        } else {
-          var_dump($filename);
         }
       });
     }
