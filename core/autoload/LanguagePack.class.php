@@ -1,6 +1,6 @@
 <?php
 
-namespace helionogueir\brainiac\autoload;
+namespace helionogueir\routing\autoload;
 
 /**
  * Language pattern:
@@ -10,17 +10,9 @@ namespace helionogueir\brainiac\autoload;
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
-class LanguagePack {
+abstract class LanguagePack {
 
-  const PACKAGE = 'helionogueir/brainiac';
+  const PACKAGE = 'helionogueir/routing';
   const PATH = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR;
-
-  /**
-   * Block construct the class, because this class is static
-   * @return false
-   */
-  public function __construct() {
-    return false;
-  }
 
 }

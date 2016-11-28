@@ -1,4 +1,5 @@
 {
-    "brainiac:paramter:isnotnull": "Parameter \"{data:value}\" can't be is null",
-    "brainiac:match:filename:invalid": "Parameter filename is invalid"
+    "routing:parameter:notfound": "Parameter \"{data:name}\" not found or is empty",
+    "routing:method:notexists": "Method \"{data:name}\" not exists",
+    "routing:route:notexists": "Route \"{data:namespace}\" not exists"
 }
