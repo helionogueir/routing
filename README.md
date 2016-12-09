@@ -15,7 +15,7 @@ composer require helionogueir/routing
 
 Load route.json file and construct a "helionogueir\routing\Route" object
 ```php
-use elionogueir\routing\route\Factory;
+use helionogueir\routing\route\Factory;
 $namespace = "path/to/request";
 $directory = "./routing/tests";
 $route = Factory::byFile($namespace, $directory);
