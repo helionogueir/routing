@@ -1,14 +1,13 @@
 {
     "name": "helionogueir/routing",
-    "description": "Routing - The Routing HTTP action request and set of configuration variables",
+    "description": "A libraty to control route for HTTP request",
     "homepage": "https://github.com/helionogueir",
     "license": "MIT",
-    "keywords": ["library", "tool", "php", "routing", "http", "action", "request", "autoload"],
+    "keywords": ["library", "tool", "route", "routing", "action", "request", "response", "autoload"],
     "require": {
-        "php": ">=7.1",
-        "helionogueir/languagepack": "=v1.1.0",
-        "helionogueir/foldercreator": "=v1.1.0",
-        "helionogueir/filecreator": "v1.1.0"
+        "php": ">=7.0",
+        "helionogueir/languagepack": "v1.1.0",
+        "helionogueir/foldercreator": "v1.1.0"
     },
     "autoload": {
         "files": ["core/autoload/register.inc"]

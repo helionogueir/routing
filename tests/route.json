@@ -1,0 +1,7 @@
+{
+    "path/to/request": {
+        "route": "path/to/request",
+        "name": "\\helionogueir\\routing\\Route",
+        "action": "getRequest"
+    }
+}

@@ -7,14 +7,21 @@ use SplFileObject;
 use helionogueir\routing\Route;
 use helionogueir\languagepack\Lang;
 use helionogueir\foldercreator\tool\Path;
-use helionogueir\routing\autoload\LanguagePack;
+use helionogueir\routing\autoload\Environment;
 
 /**
+ * - Factory route
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
 abstract class Factory {
 
+  /**
+   * - Factory route by JSON file
+   * @param string $namespace Namespace of the route to be load
+   * @param string $directory Directory path where route.json to be
+   * @return helionogueir\routing\Route Return the route pattern
+   */
   public static function byFile(string $namespace, string $directory): Route {
     $route = null;
     if (!empty($namespace) && !empty($directory)) {
@@ -29,7 +36,7 @@ abstract class Factory {
       }
     }
     if (is_null($route)) {
-      Lang::addRoot(LanguagePack::PACKAGE, LanguagePack::PATH);
+      Lang::addRoot(Environment::PACKAGE, Environment::PATH);
       throw new Exception(Lang::get("routing:route:notexists", "helionogueir/routing", Array("namespace" => $namespace)));
     }
     return $route;

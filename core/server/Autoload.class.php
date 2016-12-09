@@ -4,36 +4,33 @@ namespace helionogueir\routing\server;
 
 use Exception;
 use helionogueir\languagepack\Lang;
-use helionogueir\routing\autoload\LanguagePack;
+use helionogueir\routing\autoload\Environment;
 
 /**
- * Autoload:
- * - Autoload class pattern
- *
+ * - Register autoload pattern
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
 class Autoload {
 
   /**
-   * Register root:
-   * - Register $pathRoot in spl_autoload_register
-   *
-   * @param string $pathRoot Path root of application
+   * - Register root path for autload pattern (spl_autoload_register)
+   * @param string $pathRoot Pathname with main folder of application
    * @return null
    */
   public function registerRoot(string $pathRoot) {
     if (empty($pathRoot) || !is_dir($pathRoot)) {
-      Lang::addRoot(LanguagePack::PACKAGE, LanguagePack::PATH);
+      Lang::addRoot(Environment::PACKAGE, Environment::PATH);
       throw new Exception(Lang::get("routing:parameter:notfound", "helionogueir/routing", Array("name" => "pathRoot")));
     } else {
       spl_autoload_register(function($classname) use ($pathRoot) {
-        $filename = \helionogueir\foldercreator\tool\Path::replaceOSSeparator("{$pathRoot}/{$classname}.class.php");
-        if (file_exists($filename)) {
-          require_once($filename);
+        $pathname = \helionogueir\foldercreator\tool\Path::replaceOSSeparator("{$pathRoot}/{$classname}.class.php");
+        if (file_exists($pathname)) {
+          require_once($pathname);
         }
       });
     }
+    return null;
   }
 
 }
