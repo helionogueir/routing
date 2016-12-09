@@ -1,6 +1,3 @@
-# Routing
-The Routing HTTP action request and set of configuration variables
-
 # [Routing](https://github.com/helionogueir/routing)
 
 A libraty to control route for HTTP request.
@@ -14,7 +11,7 @@ composer require helionogueir/routing
 ------
 ## Usage
 
-### elionogueir\routing\route\Factory
+### helionogueir\routing\route\Factory
 
 Load route.json file and construct a "helionogueir\routing\Route" object
 ```php
